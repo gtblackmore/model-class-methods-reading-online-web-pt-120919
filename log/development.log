@@ -1238,3 +1238,325 @@ Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 15:26:19 -0500
+Started GET "/" for 127.0.0.1 at 2020-05-10 12:02:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 57ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:02:51 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 1450ms (Views: 1431.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:05:03 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (82.5ms)
+Completed 200 OK in 160ms (Views: 140.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=10&commit=Filter" for 127.0.0.1 at 2020-05-10 12:05:06 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"10", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 10[0m
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 92ms (Views: 83.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=11&commit=Filter" for 127.0.0.1 at 2020-05-10 12:05:11 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"11", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 11[0m
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 82ms (Views: 68.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=12&commit=Filter" for 127.0.0.1 at 2020-05-10 12:05:14 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"12", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 12[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 87ms (Views: 77.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=12&commit=Filter" for 127.0.0.1 at 2020-05-10 12:06:10 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"12", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/gtbla/dev/flatiron/labs/model-class-methods-reading-online-web-pt-120919/app/views/posts/index.html.erb:26: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/index.html.erb:26: syntax error, unexpected ensure, expecting end-of-input
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (202.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_gtblackmore__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___4059093758154997660_70341375012820 at /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (122.4ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (249.6ms)
+Started GET "/posts?utf8=%E2%9C%93&author=12&commit=Filter" for 127.0.0.1 at 2020-05-10 12:07:01 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"12", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (4.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 12[0m
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 96ms (Views: 84.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=10&commit=Filter" for 127.0.0.1 at 2020-05-10 12:07:07 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"10", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 10[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 83ms (Views: 75.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:07:12 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (4.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (1.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (1.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 106ms (Views: 85.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:07:54 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 64ms (Views: 59.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=10&commit=Filter" for 127.0.0.1 at 2020-05-10 12:08:01 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"10", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 10[0m
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:09:35 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    2: <div>
+    3:   <h3>Filter posts:</h3>
+    4:   <%= form_tag("/posts", method: "get") do %>
+    5:     <%= select_tag "author", options_from_collection_for_select(@authors, "id", "name"), include_blank: true %>
+    6:     <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
+    7:     <%= submit_tag "Filter" %>
+    8:   <% end %>
+  
+app/views/posts/index.html.erb:5:in `block in _app_views_posts_index_html_erb___2017544953722734678_70341330280900'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___2017544953722734678_70341330280900'
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.0ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.2ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_gtblackmore__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___4059093758154997660_70368460030060 at /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.3ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendering /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/gtblackmore/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.3ms)
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:11:08 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (1.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 117ms (Views: 98.3ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Today&commit=Filter" for 127.0.0.1 at 2020-05-10 12:11:12 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Today", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (created_at >='2020-05-10 00:00:00')[0m
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 62ms (Views: 56.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Old+News&commit=Filter" for 127.0.0.1 at 2020-05-10 12:11:15 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Old News", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (created_at <'2020-05-10 00:00:00')[0m
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (1.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 123ms (Views: 86.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:11:23 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 94ms (Views: 86.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:13:51 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 124ms (Views: 100.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2020-05-10 12:15:11 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 87ms (Views: 70.5ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Today&commit=Filter" for 127.0.0.1 at 2020-05-10 12:15:13 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Today", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (6.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (created_at >='2020-05-10 00:00:00')[0m
+  Rendered posts/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 92ms (Views: 64.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=10&date=&commit=Filter" for 127.0.0.1 at 2020-05-10 12:15:15 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"10", "date"=>"", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = 10[0m
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Today&commit=Filter" for 127.0.0.1 at 2020-05-10 12:15:18 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Today", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (3.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (created_at >='2020-05-10 00:00:00')[0m
+  Rendered posts/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 72ms (Views: 61.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Old+News&commit=Filter" for 127.0.0.1 at 2020-05-10 12:15:19 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Old News", "commit"=>"Filter"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mPost Load (5.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (created_at <'2020-05-10 00:00:00')[0m
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 114ms (Views: 99.6ms | ActiveRecord: 7.8ms)
+
+
